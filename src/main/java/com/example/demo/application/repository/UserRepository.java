@@ -1,4 +1,4 @@
-package com.example.demo.application.ports;
+package com.example.demo.application.repository;
 
 import java.util.List;
 

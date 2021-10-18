@@ -2,7 +2,7 @@ package com.example.demo.application.usecase;
 
 import java.util.List;
 
-import com.example.demo.application.ports.UserRepository;
+import com.example.demo.application.repository.UserRepository;
 import com.example.demo.domain.User;
 
 public class UserUsecaseImpl implements UserUsecase {
