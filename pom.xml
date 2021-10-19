@@ -15,6 +15,9 @@
 	<description>Demo project for Clean Architecture</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<owasp.dependency-check.skip>true</owasp.dependency-check.skip>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +43,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>6.4.0</version>
+				<configuration>
+					<skip>${owasp.dependency-check.skip}</skip>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
